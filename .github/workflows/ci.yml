@@ -42,7 +42,7 @@ jobs:
           npm ci
           node --check src/server.js
       - name: Set up Rust
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@1.95.0
       - name: Run contract tests
         run: cargo test --workspace
 
