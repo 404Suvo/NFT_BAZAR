@@ -3,3 +3,4 @@
 # Local editor backups and TypeScript incremental build cache
 .eslintrc.json.backup
 *.tsbuildinfo
+.test-dist/

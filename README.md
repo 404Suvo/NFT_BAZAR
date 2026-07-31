@@ -19,7 +19,7 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 | Smart contract deployment workflow | Complete | [Testnet deployment script](scripts/deploy-testnet.sh) and [current Testnet addresses](#smart-contracts-soroban) |
 | Mobile-responsive frontend | Complete | [Mobile UI screenshots](#screenshots) and the [live demo](https://nft-bazar-tan.vercel.app) |
 | Error handling & loading states | Complete | [Transaction error/pending toasts](frontend/components/ui/Toast.tsx), [wallet errors](frontend/hooks/useWallet.ts), and [loading state](frontend/components/nft/LiveSaleFeed.tsx) |
-| Contract and frontend tests | Action required | No project test suite or evidence of 3+ passing tests is currently present; see [completion notes](#how-to-complete-the-remaining-submission-items) |
+| Contract and frontend tests | Complete | [6 Soroban contract tests](#automated-tests) and [4 frontend utility tests](#automated-tests), all passing locally |
 | Production-ready architecture practices | Complete | [Backend architecture](backend/README.md#structure): Express, Prisma/PostgreSQL, MongoDB, Redis, BullMQ, authentication, rate limiting, and error middleware |
 | Documentation & demo presentation | Documentation complete; video required | This README documents the system; add the required 1-2 minute demo video; see [completion notes](#how-to-complete-the-remaining-submission-items) |
 | Public GitHub repository | Complete | [404Suvo/NFT_BAZAR](https://github.com/404Suvo/NFT_BAZAR) |
@@ -104,6 +104,25 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 
 ---
 
+## Automated Tests
+
+Run the contract suite from the repository root:
+
+```bash
+cargo test --workspace
+```
+
+Run the frontend utility suite:
+
+```bash
+cd frontend
+npm run test:frontend
+```
+
+Latest local verification: **6 Soroban contract tests passed** (NFT collection, royalty pool, and marketplace) and **4 frontend utility tests passed** with zero failures. The CI workflow runs both commands on pushes and pull requests.
+
+---
+
 ## Smart Contracts (Soroban)
 
 | Contract | Address (Testnet) |
@@ -177,11 +196,10 @@ bullmq/            ioredis — background job processing
 
 ## How to Complete the Remaining Submission Items
 
-1. Initialize this folder as a new Git repository, create at least 10 meaningful commits, and push it as a public repository under `404Suvo`.
-2. Add contract unit tests and frontend tests, run them successfully, and include a screenshot showing at least three passing tests.
-3. Trigger the GitHub Actions workflow in the new repository and add a screenshot of a successful pipeline run.
-4. Record a 1-2 minute walkthrough covering mobile UI, wallet connection, a Soroban transaction, live updates, and the Testnet contracts; publish the video and add its link here.
-5. Update the deployed backend environment variables with the current contract IDs above, then redeploy the backend and frontend so the live demo targets the new contracts.
+1. Trigger the GitHub Actions workflow in the new repository and add a screenshot of a successful pipeline run.
+2. Capture a test-output screenshot showing the current contract and frontend suites passing.
+3. Record a 1-2 minute walkthrough covering mobile UI, wallet connection, a Soroban transaction, live updates, and the Testnet contracts; publish the video and add its link here.
+4. Update the deployed backend environment variables with the current contract IDs above, then redeploy the backend and frontend so the live demo targets the new contracts.
 
 ---
 

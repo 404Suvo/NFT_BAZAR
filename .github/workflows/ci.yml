@@ -33,11 +33,18 @@ jobs:
       - name: Run frontend type-check
         working-directory: ./frontend
         run: npm run type-check
+      - name: Run frontend tests
+        working-directory: ./frontend
+        run: npm run test:frontend
       - name: Check backend syntax
         working-directory: ./backend
         run: |
           npm ci
           node --check src/server.js
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+      - name: Run contract tests
+        run: cargo test --workspace
 
   deploy-frontend:
     needs: ci

@@ -145,3 +145,70 @@ impl NFTCollection {
         env.storage().instance().get(&DataKey::Symbol).unwrap()
     }
 }
+
+#[cfg(test)]
+extern crate std;
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use soroban_sdk::{testutils::Address as _, Env};
+
+    fn setup(env: &Env) -> (NFTCollectionClient<'_>, Address, Address) {
+        env.mock_all_auths();
+        let contract_id = env.register(NFTCollection, ());
+        let client = NFTCollectionClient::new(env, &contract_id);
+        let admin = Address::generate(env);
+        let royalty_pool = Address::generate(env);
+
+        client.initialize(
+            &admin,
+            &royalty_pool,
+            &1_000,
+            &String::from_str(env, "CryptoCanvas"),
+            &String::from_str(env, "CC"),
+        );
+
+        (client, admin, royalty_pool)
+    }
+
+    #[test]
+    fn initialization_exposes_collection_metadata() {
+        let env = Env::default();
+        let (client, _admin, royalty_pool) = setup(&env);
+
+        assert_eq!(client.name(), String::from_str(&env, "CryptoCanvas"));
+        assert_eq!(client.symbol(), String::from_str(&env, "CC"));
+        assert_eq!(
+            client.royalty_info(&1, &20_000),
+            (royalty_pool, 2_000)
+        );
+    }
+
+    #[test]
+    fn mint_records_owner_and_metadata_uri() {
+        let env = Env::default();
+        let (client, _admin, _royalty_pool) = setup(&env);
+        let owner = Address::generate(&env);
+        let uri = String::from_str(&env, "ipfs://bafy-test-token");
+
+        let token_id = client.mint(&owner, &uri);
+
+        assert_eq!(token_id, 1);
+        assert_eq!(client.owner_of(&token_id), owner);
+        assert_eq!(client.token_uri(&token_id), uri);
+    }
+
+    #[test]
+    fn transfer_changes_the_recorded_owner() {
+        let env = Env::default();
+        let (client, _admin, _royalty_pool) = setup(&env);
+        let owner = Address::generate(&env);
+        let recipient = Address::generate(&env);
+        let token_id = client.mint(&owner, &String::from_str(&env, "ipfs://bafy-transfer"));
+
+        client.transfer(&owner, &recipient, &token_id);
+
+        assert_eq!(client.owner_of(&token_id), recipient);
+    }
+}

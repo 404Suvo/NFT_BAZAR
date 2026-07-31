@@ -126,3 +126,53 @@ impl RoyaltyPool {
             .unwrap_or(0)
     }
 }
+
+#[cfg(test)]
+extern crate std;
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use soroban_sdk::{testutils::Address as _, vec, Env};
+
+    #[test]
+    fn initialization_accepts_a_complete_royalty_split() {
+        let env = Env::default();
+        env.mock_all_auths();
+        let contract_id = env.register(RoyaltyPool, ());
+        let client = RoyaltyPoolClient::new(&env, &contract_id);
+        let admin = Address::generate(&env);
+        let token = Address::generate(&env);
+        let creator = Address::generate(&env);
+        let stakers = Address::generate(&env);
+        let treasury = Address::generate(&env);
+
+        client.initialize(
+            &admin,
+            &token,
+            &vec![&env, creator.clone(), stakers, treasury],
+            &vec![&env, 5_000_i128, 3_000_i128, 2_000_i128],
+        );
+
+        assert_eq!(client.claimable(&creator), 0);
+    }
+
+    #[test]
+    #[should_panic(expected = "shares must sum to 10000 bps")]
+    fn initialization_rejects_an_incomplete_royalty_split() {
+        let env = Env::default();
+        env.mock_all_auths();
+        let contract_id = env.register(RoyaltyPool, ());
+        let client = RoyaltyPoolClient::new(&env, &contract_id);
+        let admin = Address::generate(&env);
+        let token = Address::generate(&env);
+        let recipient = Address::generate(&env);
+
+        client.initialize(
+            &admin,
+            &token,
+            &vec![&env, recipient],
+            &vec![&env, 9_999_i128],
+        );
+    }
+}

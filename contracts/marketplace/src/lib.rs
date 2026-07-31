@@ -134,3 +134,38 @@ impl Marketplace {
             .unwrap()
     }
 }
+
+#[cfg(test)]
+extern crate std;
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use soroban_sdk::{testutils::Address as _, Address, Env};
+
+    #[test]
+    fn seller_can_create_and_cancel_a_listing() {
+        let env = Env::default();
+        env.mock_all_auths();
+        let contract_id = env.register(Marketplace, ());
+        let client = MarketplaceClient::new(&env, &contract_id);
+        let admin = Address::generate(&env);
+        let payment_token = Address::generate(&env);
+        let royalty_pool = Address::generate(&env);
+        let nft = Address::generate(&env);
+        let seller = Address::generate(&env);
+        let token_id = 7_u64;
+
+        client.initialize(&admin, &payment_token, &royalty_pool);
+        client.list_nft(&nft, &seller, &token_id, &5_000_000);
+
+        let active_listing = client.listing(&nft, &token_id);
+        assert_eq!(active_listing.seller, seller);
+        assert_eq!(active_listing.price, 5_000_000);
+        assert!(active_listing.active);
+
+        client.cancel_listing(&nft, &seller, &token_id);
+
+        assert!(!client.listing(&nft, &token_id).active);
+    }
+}

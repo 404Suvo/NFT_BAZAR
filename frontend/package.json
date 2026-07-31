@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test:frontend": "tsc --module commonjs --moduleResolution node --target es2020 --esModuleInterop --outDir .test-dist --rootDir . tests/utils.test.ts lib/utils.ts lib/constants.ts && node --test .test-dist/tests/utils.test.js"
   },
   "dependencies": {
     "@stellar/freighter-api": "^3.0.0",
