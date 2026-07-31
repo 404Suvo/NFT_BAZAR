@@ -15,7 +15,7 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 | Advanced smart contract development | Complete | [NFT collection](contracts/nft_collection/src/lib.rs), [royalty pool](contracts/royalty_pool/src/lib.rs), and [marketplace](contracts/marketplace/src/lib.rs) Soroban contracts |
 | Inter-contract communication | Complete | Marketplace calls [`royalty_info`](contracts/marketplace/src/lib.rs#L87) on the NFT contract and [`distribute`](contracts/marketplace/src/lib.rs#L96) on the royalty pool |
 | Event streaming & real-time updates | Complete | [Contract events](contracts/marketplace/src/lib.rs#L67), [Horizon event indexer](backend/src/indexer/indexer.js), and [live sale feed](frontend/components/nft/LiveSaleFeed.tsx) |
-| CI/CD pipeline setup | Configured | [GitHub Actions workflow](.github/workflows/ci.yml) runs checks and deploys the frontend to Vercel and backend to Render |
+| CI/CD pipeline setup | Complete | [GitHub Actions workflow](.github/workflows/ci.yml) runs checks and deploys the frontend to Vercel and backend to Render; see [successful run](#ci-cd-pipeline-evidence) |
 | Smart contract deployment workflow | Complete | [Testnet deployment script](scripts/deploy-testnet.sh) and [current Testnet addresses](#smart-contracts-soroban) |
 | Mobile-responsive frontend | Complete | [Mobile UI screenshots](#screenshots) and the [live demo](https://nft-bazar-tan.vercel.app) |
 | Error handling & loading states | Complete | [Transaction error/pending toasts](frontend/components/ui/Toast.tsx), [wallet errors](frontend/hooks/useWallet.ts), and [loading state](frontend/components/nft/LiveSaleFeed.tsx) |
@@ -29,7 +29,7 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 | Contract deployment address | Complete | [Current Testnet contract IDs](#smart-contracts-soroban) |
 | Transaction hash for a contract interaction | Complete | [Marketplace initialization transaction](https://stellar.expert/explorer/testnet/tx/f483e1226a475d648283cfacf1d059550c4fba53ddf02eb3feb7b8ab69cd67e7) |
 | Mobile-responsive UI screenshot | Complete | [Mobile screenshots](#screenshots) |
-| CI/CD pipeline running screenshot | Action required | Run the workflow after publishing, then add a successful Actions-run screenshot; see [completion notes](#how-to-complete-the-remaining-submission-items) |
+| CI/CD pipeline running screenshot | Complete | [Successful GitHub Actions run](docs/ci-cd-pipeline-success.png): CI, frontend deployment, and backend deployment passed |
 | Test output with 3+ passing tests | Complete | [Contract test-output screenshot](docs/contract-test-output.png): 6 contract tests passed with zero failures |
 | Demo video link (1-2 minutes) | Complete | [Watch the project demo](https://res.cloudinary.com/u0zkue69/video/upload/v1785521608/Video_link_ayplep.mp4) |
 
@@ -70,6 +70,10 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 
 [![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel)](https://nft-bazar-tan.vercel.app)
 [![Render](https://img.shields.io/badge/Backend-Render-blue?logo=render)](https://nft-bazar.onrender.com)
+
+### CI/CD Pipeline Evidence
+
+![Successful GitHub Actions CI/CD run with CI, frontend deployment, and backend deployment passing](docs/ci-cd-pipeline-success.png)
 
 ---
 
@@ -206,10 +210,9 @@ bullmq/            ioredis — background job processing
 
 ---
 
-## How to Complete the Remaining Submission Items
+## Final Deployment Note
 
-1. Trigger the GitHub Actions workflow in the new repository and add a screenshot of a successful pipeline run.
-2. Update the deployed backend environment variables with the current contract IDs above, then redeploy the backend and frontend so the live demo targets the new contracts.
+Update the deployed backend environment variables with the current contract IDs above, then redeploy the backend and frontend so the live demo targets the new contracts.
 
 ---
 
