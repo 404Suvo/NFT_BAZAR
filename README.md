@@ -24,7 +24,7 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 | Documentation & demo presentation | Documentation complete; video required | This README documents the system; add the required 1-2 minute demo video; see [completion notes](#how-to-complete-the-remaining-submission-items) |
 | Public GitHub repository | Complete | [404Suvo/NFT_BAZAR](https://github.com/404Suvo/NFT_BAZAR) |
 | README with complete documentation | Complete | [This README](README.md) |
-| 10+ meaningful commits | Complete | [13 meaningful commits](https://github.com/404Suvo/NFT_BAZAR/commits/master) |
+| 10+ meaningful commits | Complete | [Git commit history](https://github.com/404Suvo/NFT_BAZAR/commits/master) (10+ commits) |
 | Live demo link | Available | [Vercel deployment](https://nft-bazar-tan.vercel.app) |
 | Contract deployment address | Complete | [Current Testnet contract IDs](#smart-contracts-soroban) |
 | Transaction hash for a contract interaction | Complete | [Marketplace initialization transaction](https://stellar.expert/explorer/testnet/tx/f483e1226a475d648283cfacf1d059550c4fba53ddf02eb3feb7b8ab69cd67e7) |
