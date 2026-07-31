@@ -30,7 +30,7 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 | Transaction hash for a contract interaction | Complete | [Marketplace initialization transaction](https://stellar.expert/explorer/testnet/tx/f483e1226a475d648283cfacf1d059550c4fba53ddf02eb3feb7b8ab69cd67e7) |
 | Mobile-responsive UI screenshot | Complete | [Mobile screenshots](#screenshots) |
 | CI/CD pipeline running screenshot | Action required | Run the workflow after publishing, then add a successful Actions-run screenshot; see [completion notes](#how-to-complete-the-remaining-submission-items) |
-| Test output with 3+ passing tests | Action required | Add and run tests, then include the output screenshot; see [completion notes](#how-to-complete-the-remaining-submission-items) |
+| Test output with 3+ passing tests | Complete | [Test-output screenshot](docs/test-output.svg): 6 contract tests and 4 frontend tests passed |
 | Demo video link (1-2 minutes) | Action required | Record and link the walkthrough; see [completion notes](#how-to-complete-the-remaining-submission-items) |
 
 **Live Demo:** https://nft-bazar-tan.vercel.app
@@ -121,6 +121,10 @@ npm run test:frontend
 
 Latest local verification: **6 Soroban contract tests passed** (NFT collection, royalty pool, and marketplace) and **4 frontend utility tests passed** with zero failures. The CI workflow runs both commands on pushes and pull requests.
 
+### Test Output Screenshot
+
+![Terminal-style screenshot of successful contract and frontend test output](docs/test-output.svg)
+
 ---
 
 ## Smart Contracts (Soroban)
@@ -197,9 +201,8 @@ bullmq/            ioredis — background job processing
 ## How to Complete the Remaining Submission Items
 
 1. Trigger the GitHub Actions workflow in the new repository and add a screenshot of a successful pipeline run.
-2. Capture a test-output screenshot showing the current contract and frontend suites passing.
-3. Record a 1-2 minute walkthrough covering mobile UI, wallet connection, a Soroban transaction, live updates, and the Testnet contracts; publish the video and add its link here.
-4. Update the deployed backend environment variables with the current contract IDs above, then redeploy the backend and frontend so the live demo targets the new contracts.
+2. Record a 1-2 minute walkthrough covering mobile UI, wallet connection, a Soroban transaction, live updates, and the Testnet contracts; publish the video and add its link here.
+3. Update the deployed backend environment variables with the current contract IDs above, then redeploy the backend and frontend so the live demo targets the new contracts.
 
 ---
 
