@@ -303,27 +303,3 @@ NEXT_PUBLIC_NETWORK=testnet
 
 ## License
  
-
-## Level 5 Tables
-
-Table 1: User Directory (5 sample users)
-
-| User Name | User Email | User Wallet Address |
-|---|---|---|
-| Alice Johnson | alice@example.com | 0xA1B2C3D4E5F678901234567890ABCDEF12345678 |
-| Bob Smith | bob@example.com | 0xB1C2D3E4F5A678901234567890ABCDEF12345679 |
-| Carol Nguyen | carol@example.com | 0xC1D2E3F4A5B678901234567890ABCDEF1234567A |
-| David Lee | david@example.com | 0xD1E2F3A4B5C678901234567890ABCDEF1234567B |
-| Eva Martinez | eva@example.com | 0xE1F2A3B4C5D678901234567890ABCDEF1234567C |
-
-Table 2: User Feedback Implementation
-
-| User Name | User Email | User Wallet Address | User Feedback | Commit ID |
-|---|---|---|---|---|
-| Alice Johnson | alice@example.com | 0xA1B2C3D4E5F678901234567890ABCDEF12345678 | Fix mobile nav overlap on small screens | 9a1f2b3 |
-| Bob Smith | bob@example.com | 0xB1C2D3E4F5A678901234567890ABCDEF12345679 | Add edge-case test for NFT mint flow | 4d5e6f7 |
-| Carol Nguyen | carol@example.com | 0xC1D2E3F4A5B678901234567890ABCDEF1234567A | Improve loading spinner during data fetch | 8e9f0a1 |
-| David Lee | david@example.com | 0xD1E2F3A4B5C678901234567890ABCDEF1234567B | Clarify error messages for failed payments | 1b2c3d4 |
-| Eva Martinez | eva@example.com | 0xE1F2A3B4C5D678901234567890ABCDEF1234567C | Add dark mode toggle | 5a6b7c8 |
-
- 
