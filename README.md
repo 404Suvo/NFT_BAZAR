@@ -30,7 +30,7 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 | Transaction hash for a contract interaction | Complete | [Marketplace initialization transaction](https://stellar.expert/explorer/testnet/tx/f483e1226a475d648283cfacf1d059550c4fba53ddf02eb3feb7b8ab69cd67e7) |
 | Mobile-responsive UI screenshot | Complete | [Mobile screenshots](#screenshots) |
 | CI/CD pipeline running screenshot | Action required | Run the workflow after publishing, then add a successful Actions-run screenshot; see [completion notes](#how-to-complete-the-remaining-submission-items) |
-| Test output with 3+ passing tests | Complete | [Test-output screenshot](docs/test-output.svg): 6 contract tests and 4 frontend tests passed |
+| Test output with 3+ passing tests | Complete | [Contract test-output screenshot](docs/contract-test-output.png): 6 contract tests passed with zero failures |
 | Demo video link (1-2 minutes) | Action required | Record and link the walkthrough; see [completion notes](#how-to-complete-the-remaining-submission-items) |
 
 **Live Demo:** https://nft-bazar-tan.vercel.app
@@ -121,9 +121,9 @@ npm run test:frontend
 
 Latest local verification: **6 Soroban contract tests passed** (NFT collection, royalty pool, and marketplace) and **4 frontend utility tests passed** with zero failures. The CI workflow runs both commands on pushes and pull requests.
 
-### Test Output Screenshot
+### Contract Test Output Screenshot
 
-![Terminal-style screenshot of successful contract and frontend test output](docs/test-output.svg)
+![Terminal screenshot of successful Soroban contract test output](docs/contract-test-output.png)
 
 ---
 
