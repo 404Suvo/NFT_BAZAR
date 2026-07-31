@@ -1,24 +1,10 @@
+<p align="center">
+  <img src="frontend/public/favicon.jpeg" alt="NFT Bazar logo" width="144"/>
+</p>
+
 # NFT Bazar
 
 > Decentralized NFT marketplace on the Stellar network with automatic royalty splitting for creators.
-
-**Live Demo:** https://nft-bazar-tan.vercel.app
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/nft-bazar)
-
----
-
-## Screenshots
-
-### Mobile Responsive View
-<!-- Insert mobile screenshot here -->
-![Mobile View](https://res.cloudinary.com/ddp0nf4uv/image/upload/v1776074599/Screenshot_2026-04-13_151711_afcwvn.png)
-
-<p align="center">
-  <img src="https://res.cloudinary.com/ddp0nf4uv/image/upload/v1776074599/Screenshot_2026-04-13_151736_pls2qm.png" alt="Mobile View 1" width="30%"/>
-  <img src="https://res.cloudinary.com/ddp0nf4uv/image/upload/v1776074599/Screenshot_2026-04-13_151800_hvsxyp.png" alt="Mobile View 2" width="30%"/>
-  <img src="https://res.cloudinary.com/ddp0nf4uv/image/upload/v1776074600/Screenshot_2026-04-13_151830_vzv4no.png" alt="Mobile View 3" width="30%"/>
-</p>
 
 ## Submission Checklist & Evidence
 
@@ -36,9 +22,9 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 | Contract and frontend tests | Action required | No project test suite or evidence of 3+ passing tests is currently present; see [completion notes](#how-to-complete-the-remaining-submission-items) |
 | Production-ready architecture practices | Complete | [Backend architecture](backend/README.md#structure): Express, Prisma/PostgreSQL, MongoDB, Redis, BullMQ, authentication, rate limiting, and error middleware |
 | Documentation & demo presentation | Documentation complete; video required | This README documents the system; add the required 1-2 minute demo video; see [completion notes](#how-to-complete-the-remaining-submission-items) |
-| Public GitHub repository | Action required | Publish this reconstructed repository from the new `404Suvo` account; see [completion notes](#how-to-complete-the-remaining-submission-items) |
+| Public GitHub repository | Complete | [404Suvo/NFT_BAZAR](https://github.com/404Suvo/NFT_BAZAR) |
 | README with complete documentation | Complete | [This README](README.md) |
-| 10+ meaningful commits | Action required | Git history was removed; create and push at least 10 meaningful commits before submission; see [completion notes](#how-to-complete-the-remaining-submission-items) |
+| 10+ meaningful commits | Complete | [13 meaningful commits](https://github.com/404Suvo/NFT_BAZAR/commits/master) |
 | Live demo link | Available | [Vercel deployment](https://nft-bazar-tan.vercel.app) |
 | Contract deployment address | Complete | [Current Testnet contract IDs](#smart-contracts-soroban) |
 | Transaction hash for a contract interaction | Complete | [Marketplace initialization transaction](https://stellar.expert/explorer/testnet/tx/f483e1226a475d648283cfacf1d059550c4fba53ddf02eb3feb7b8ab69cd67e7) |
@@ -47,6 +33,24 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 | Test output with 3+ passing tests | Action required | Add and run tests, then include the output screenshot; see [completion notes](#how-to-complete-the-remaining-submission-items) |
 | Demo video link (1-2 minutes) | Action required | Record and link the walkthrough; see [completion notes](#how-to-complete-the-remaining-submission-items) |
 
+**Live Demo:** https://nft-bazar-tan.vercel.app
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/404Suvo/NFT_BAZAR)
+
+---
+
+## Screenshots
+
+### Mobile Responsive View
+<!-- Insert mobile screenshot here -->
+![Mobile View](https://res.cloudinary.com/ddp0nf4uv/image/upload/v1776074599/Screenshot_2026-04-13_151711_afcwvn.png)
+
+<p align="center">
+  <img src="https://res.cloudinary.com/ddp0nf4uv/image/upload/v1776074599/Screenshot_2026-04-13_151736_pls2qm.png" alt="Mobile View 1" width="30%"/>
+  <img src="https://res.cloudinary.com/ddp0nf4uv/image/upload/v1776074599/Screenshot_2026-04-13_151800_hvsxyp.png" alt="Mobile View 2" width="30%"/>
+  <img src="https://res.cloudinary.com/ddp0nf4uv/image/upload/v1776074600/Screenshot_2026-04-13_151830_vzv4no.png" alt="Mobile View 3" width="30%"/>
+</p>
+
 ## Deployment
 
 - **Frontend**: Auto-deployed to Vercel on every push to `master`
@@ -54,7 +58,7 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 
 ### CI/CD Pipeline
 
-[![CI/CD Pipeline](https://github.com/rupamghosh2006/NFT_BAZAR/actions/workflows/ci.yml/badge.svg)](https://github.com/rupamghosh2006/NFT_BAZAR/actions)
+[![CI/CD Pipeline](https://github.com/404Suvo/NFT_BAZAR/actions/workflows/ci.yml/badge.svg)](https://github.com/404Suvo/NFT_BAZAR/actions)
 
 [![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel)](https://nft-bazar-tan.vercel.app)
 [![Render](https://img.shields.io/badge/Backend-Render-blue?logo=render)](https://nft-bazar.onrender.com)
