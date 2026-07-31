@@ -21,7 +21,7 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 | Error handling & loading states | Complete | [Transaction error/pending toasts](frontend/components/ui/Toast.tsx), [wallet errors](frontend/hooks/useWallet.ts), and [loading state](frontend/components/nft/LiveSaleFeed.tsx) |
 | Contract and frontend tests | Complete | [6 Soroban contract tests](#automated-tests) and [4 frontend utility tests](#automated-tests), all passing locally |
 | Production-ready architecture practices | Complete | [Backend architecture](backend/README.md#structure): Express, Prisma/PostgreSQL, MongoDB, Redis, BullMQ, authentication, rate limiting, and error middleware |
-| Documentation & demo presentation | Documentation complete; video required | This README documents the system; add the required 1-2 minute demo video; see [completion notes](#how-to-complete-the-remaining-submission-items) |
+| Documentation & demo presentation | Complete | [Project documentation](README.md) and [1-2 minute demo video](https://res.cloudinary.com/u0zkue69/video/upload/v1785521608/Video_link_ayplep.mp4) |
 | Public GitHub repository | Complete | [404Suvo/NFT_BAZAR](https://github.com/404Suvo/NFT_BAZAR) |
 | README with complete documentation | Complete | [This README](README.md) |
 | 10+ meaningful commits | Complete | [Git commit history](https://github.com/404Suvo/NFT_BAZAR/commits/master) (10+ commits) |
@@ -31,7 +31,7 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
 | Mobile-responsive UI screenshot | Complete | [Mobile screenshots](#screenshots) |
 | CI/CD pipeline running screenshot | Action required | Run the workflow after publishing, then add a successful Actions-run screenshot; see [completion notes](#how-to-complete-the-remaining-submission-items) |
 | Test output with 3+ passing tests | Complete | [Contract test-output screenshot](docs/contract-test-output.png): 6 contract tests passed with zero failures |
-| Demo video link (1-2 minutes) | Action required | Record and link the walkthrough; see [completion notes](#how-to-complete-the-remaining-submission-items) |
+| Demo video link (1-2 minutes) | Complete | [Watch the project demo](https://res.cloudinary.com/u0zkue69/video/upload/v1785521608/Video_link_ayplep.mp4) |
 
 **Live Demo:** https://nft-bazar-tan.vercel.app
 
@@ -50,6 +50,14 @@ Quick navigation: [contracts](#smart-contracts-soroban) | [deployment](#deployme
   <img src="https://res.cloudinary.com/ddp0nf4uv/image/upload/v1776074599/Screenshot_2026-04-13_151800_hvsxyp.png" alt="Mobile View 2" width="30%"/>
   <img src="https://res.cloudinary.com/ddp0nf4uv/image/upload/v1776074600/Screenshot_2026-04-13_151830_vzv4no.png" alt="Mobile View 3" width="30%"/>
 </p>
+
+## Demo Video
+
+[Watch the 1-2 minute NFT Bazar walkthrough](https://res.cloudinary.com/u0zkue69/video/upload/v1785521608/Video_link_ayplep.mp4)
+
+<video controls width="100%" src="https://res.cloudinary.com/u0zkue69/video/upload/v1785521608/Video_link_ayplep.mp4">
+  Your browser does not support embedded video. Use the link above to watch the demo.
+</video>
 
 ## Deployment
 
@@ -201,8 +209,7 @@ bullmq/            ioredis — background job processing
 ## How to Complete the Remaining Submission Items
 
 1. Trigger the GitHub Actions workflow in the new repository and add a screenshot of a successful pipeline run.
-2. Record a 1-2 minute walkthrough covering mobile UI, wallet connection, a Soroban transaction, live updates, and the Testnet contracts; publish the video and add its link here.
-3. Update the deployed backend environment variables with the current contract IDs above, then redeploy the backend and frontend so the live demo targets the new contracts.
+2. Update the deployed backend environment variables with the current contract IDs above, then redeploy the backend and frontend so the live demo targets the new contracts.
 
 ---
 
